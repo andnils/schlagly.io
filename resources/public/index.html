@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+      <center>
+      <div id="app">
+	  
+	  <h1> Wheel of stuff </h1>
+	  <div> <button id="btn"> Spin the wheel </button> </div>
+	  <canvas id="canvas" width="400" height="400">	</canvas>
+	  
+	  <div id="result">
+	  </div>
+
+    </div>
+      </center>
+    
+    <script src="js/compiled/schlagly/io.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+
+     var data = [
+	 "Java",
+	 "C++",
+	 "LISP",
+	 "Erlang",
+	 "Purescript",
+	 "Elm"
+     ];
+     
+     schlagly.io.core.start(data);
+
+     document.getElementById('btn').onclick = schlagly.io.core.button_handler;
+     
+    </script>
+  </body>
+</html>
