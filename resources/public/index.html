@@ -35,6 +35,12 @@
      schlagly.io.core.start(data);
 
      document.getElementById('btn').onclick = schlagly.io.core.button_handler;
+
+     document.onkeypress = (e) => {
+     if (e.charCode === 32) {
+      schlagly.io.core.button_handler();
+     }
+     };
      
     </script>
   </body>
